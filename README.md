@@ -1,7 +1,11 @@
 # dsh-reach-point
 
 <p align="center">
-  <img src="./docs/rail-preview.svg" alt="dsh-reach-point 安装后效果" width="720">
+  <img src="./docs/rail-real.png" alt="dsh-reach-point 刻度栏（真实截图，对话内容已模糊）" width="720">
+</p>
+
+<p align="center">
+  <img src="./docs/rail-hover-real.png" alt="悬停刻度显示预览卡（对话内容已模糊）" width="720">
 </p>
 
 为 DeepSeek Harness（DSH）Web 对话提供轻量的输入定位导航。界面采用 Codex 风格：聊天内容左侧用细短线标记每次真实用户输入，当前阅读位置显示为更长的深色线；悬停或键盘聚焦时，在刻度右侧显示圆角摘要卡。

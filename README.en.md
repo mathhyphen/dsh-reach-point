@@ -1,7 +1,11 @@
 # dsh-reach-point
 
 <p align="center">
-  <img src="./docs/rail-preview.svg" alt="dsh-reach-point installed preview" width="720">
+  <img src="./docs/rail-real.png" alt="dsh-reach-point rail (real screenshot, chat blurred)" width="720">
+</p>
+
+<p align="center">
+  <img src="./docs/rail-hover-real.png" alt="Hover a tick to preview (chat blurred)" width="720">
 </p>
 
 A lightweight input navigator for DeepSeek Harness (DSH) Web. It follows Codex's visual language: thin marks beside the left edge of the conversation, a longer dark mark for the current reading position, and a rounded preview card to the right on hover or keyboard focus.
