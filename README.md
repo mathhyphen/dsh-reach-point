@@ -1,5 +1,9 @@
 # dsh-reach-point
 
+<p align="center">
+  <img src="./docs/interaction.svg" alt="dsh-reach-point 交互流程图" width="720">
+</p>
+
 为 DeepSeek Harness（DSH）Web 对话提供轻量的输入定位导航。界面采用 Codex 风格：聊天内容左侧用细短线标记每次真实用户输入，当前阅读位置显示为更长的深色线；悬停或键盘聚焦时，在刻度右侧显示圆角摘要卡。
 
 Host 从当前会话日志读取全量输入，Web 端再用页面锚点判断哪些消息已加载。点击未加载刻度时，插件会按需触发“加载更早”并定位，不会在打开会话时预先展开全部历史。
@@ -19,7 +23,7 @@ Host 从当前会话日志读取全量输入，Web 端再用页面锚点判断�
 当前目录可直接链接安装：
 
 ```powershell
-dsh plugin --profile web add link:D:/apps/dsh_plugins/dsh-reach-point
+dsh plugin --profile web add link:/path/to/dsh-reach-point
 ```
 
 其他位置请换成插件的绝对路径：

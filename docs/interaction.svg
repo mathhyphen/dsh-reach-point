@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" font-family="'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="host" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="web" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#60a5fa"/>
+    </marker>
+  </defs>
+  <rect width="900" height="460" rx="18" fill="url(#bg)"/>
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#e2e8f0">dsh-reach-point 交互流程</text>
+  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#94a3b8">会话输入定位导航 · Codex 风格刻度栏</text>
+
+  <!-- session log -->
+  <rect x="40" y="120" width="220" height="84" rx="11" fill="url(#card)" stroke="#cbd5e1"/>
+  <text x="150" y="150" text-anchor="middle" font-size="13.5" font-weight="600" fill="#0f172a">已附着会话日志</text>
+  <text x="150" y="170" text-anchor="middle" font-size="11" fill="#475569">真实用户输入提取</text>
+  <text x="150" y="188" text-anchor="middle" font-size="11" fill="#475569">user/message · role: user</text>
+
+  <!-- host api -->
+  <rect x="340" y="120" width="220" height="84" rx="11" fill="url(#host)"/>
+  <text x="450" y="150" text-anchor="middle" font-size="13.5" font-weight="600" fill="#ffffff">Host API</text>
+  <text x="450" y="170" text-anchor="middle" font-size="11" fill="#dbeafe">GET /plugins/dsh-reach-point/api/users</text>
+  <text x="450" y="188" text-anchor="middle" font-size="11" fill="#dbeafe">返回 { users: [...] }</text>
+
+  <!-- web rail -->
+  <rect x="640" y="120" width="220" height="84" rx="11" fill="url(#web)"/>
+  <text x="750" y="150" text-anchor="middle" font-size="13.5" font-weight="600" fill="#ffffff">客户端刻度栏</text>
+  <text x="750" y="170" text-anchor="middle" font-size="11" fill="#ede9fe">左侧细刻度 · 当前阅读长线</text>
+  <text x="750" y="188" text-anchor="middle" font-size="11" fill="#ede9fe">悬停预览卡 · 键盘导航</text>
+
+  <!-- arrows -->
+  <line x1="260" y1="162" x2="330" y2="162" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="560" y1="162" x2="630" y2="162" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- fallback loop -->
+  <rect x="340" y="270" width="420" height="72" rx="11" fill="url(#card)" stroke="#cbd5e1"/>
+  <text x="550" y="298" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">未加载刻度 → 按需触发「加载更早」</text>
+  <text x="550" y="320" text-anchor="middle" font-size="11.5" fill="#475569">用页面 DOM 锚点判断已加载消息，点击再加载，绝不预先展开全部历史</text>
+
+  <!-- dashed arrow down from web rail to fallback -->
+  <path d="M750 204 C750 240, 700 250, 700 262" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrb)"/>
+
+  <!-- interaction notes at bottom -->
+  <text x="450" y="380" text-anchor="middle" font-size="12" fill="#94a3b8">点击跳转 + 短暂高亮 · 滚轮逐条浏览 · 方向键 / Home / End / Enter / Space</text>
+  <text x="450" y="404" text-anchor="middle" font-size="12" fill="#94a3b8">自动跟随明暗主题 · 窄屏隐藏 · 尊重 prefers-reduced-motion</text>
+</svg>

@@ -1,5 +1,9 @@
 # dsh-reach-point
 
+<p align="center">
+  <img src="./docs/interaction.svg" alt="dsh-reach-point interaction flow" width="720">
+</p>
+
 A lightweight input navigator for DeepSeek Harness (DSH) Web. It follows Codex's visual language: thin marks beside the left edge of the conversation, a longer dark mark for the current reading position, and a rounded preview card to the right on hover or keyboard focus.
 
 The Host reads the complete input history from the attached session log. The Web half uses page anchors to determine which messages are loaded and only asks DSH to “load older” when an unloaded mark is selected; opening a conversation never expands all history up front.
@@ -17,7 +21,7 @@ The Host reads the complete input history from the attached session log. The Web
 Link the current directory directly:
 
 ```powershell
-dsh plugin --profile web add link:D:/apps/dsh_plugins/dsh-reach-point
+dsh plugin --profile web add link:/path/to/dsh-reach-point
 ```
 
 For another location, use `dsh plugin --profile web add link:/absolute/path/to/dsh-reach-point`. Restart `dsh web`, then refresh the browser page.
