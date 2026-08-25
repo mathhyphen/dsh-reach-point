@@ -1,0 +1,12 @@
+{
+  "name": "dsh-reach-point",
+  "description": "Conversation point navigation for the DSH Web GUI.",
+  "version": "0.1.0",
+  "entry": {
+    "name": "dsh-reach-point",
+    "inject": ["webServer", "sessions"]
+  },
+  "client": {
+    "platform": "web"
+  }
+}

@@ -1,0 +1,9 @@
+# Node
+node_modules/
+
+# Local analysis output (contains machine-specific paths)
+graphify-out/
+
+# OS
+Thumbs.db
+.DS_Store
